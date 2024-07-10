@@ -1,0 +1,61 @@
+/*----------------------
+  Buttons
+-----------------------*/ 
+.navbar-toggler {
+  border: 0;
+  box-shadow: none !important;
+  .navbar-toggler-icon  {
+    background: $white-bg;
+    transition: background 10ms 300ms ease;
+    display: block;
+    width: 30px;
+    height: 2px;
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+      position: absolute;
+      right: 0;
+      left: 0;
+      background: $white-bg;
+      width: 30px;
+      height: 2px;
+      top: 8px;
+    }
+    &::before {
+      top: -8px;
+    }
+  }
+  &.open .navbar-toggler-icon:before {
+    transform: rotate(45deg);
+  }
+  &.open .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+  }
+  &.open .navbar-toggler-icon::after ,
+  &.open .navbar-toggler-icon::before {
+    top: 0;
+    transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+  }
+  &.open .navbar-toggler-icon {
+    background: transparent;
+  }
+}
+.main-btn {
+  padding: 15px 35px;
+  width: fit-content;
+  background: linear-gradient(90deg, $main-color 0%, $sub-color 100%), $white-bg;
+  background-size:100% 100% ;
+  background-repeat: no-repeat;
+  display: flex;
+  font-weight: $fw-medium;
+  color: $text-color;
+  text-transform: capitalize;
+  align-items: center;
+  gap: 5px;
+  transition:background .5s ;
+  &:hover {
+  background-size:200% 100% ;
+  }
+}

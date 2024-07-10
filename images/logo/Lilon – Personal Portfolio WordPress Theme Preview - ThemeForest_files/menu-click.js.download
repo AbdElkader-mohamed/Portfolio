@@ -1,0 +1,34 @@
+/*
+ * Copyright (c) 2023 Shtheme
+ * Author: Shtheme
+ * This file is made for CURRENT TEMPLATE
+*/
+
+jQuery(document).ready(function(){
+
+	"use strict";
+	
+	// here all ready functions
+	// 
+	onClick();
+	
+	
+	
+});
+
+
+function onClick(){
+	jQuery(".dropdown-menu").parent('li').addClass('has-child');
+	jQuery('.has-child a').on('click',function(ev) {
+		jQuery(this).next(jQuery('.sub-menu')).slideToggle('fast', function(){
+			jQuery(this).parent().toggleClass('active');
+		});
+		ev.stopPropagation();
+	});
+	
+	jQuery('.has-child').on('click',function(ev) {
+		jQuery(this).find(jQuery('.sub-menu')).slideToggle('fast', function(){
+			jQuery(this).parent().toggleClass('active');
+		});
+	});
+}

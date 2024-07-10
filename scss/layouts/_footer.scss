@@ -1,0 +1,15 @@
+/*----------------------
+  Footer
+-----------------------*/
+.copyright {
+  direction: ltr;
+  padding: 20px 0;
+  border-top: 1px solid rgba($white-bg,0.1);
+  text-align: center;
+  color: $text-color;
+  a {
+    color: $main-color;
+    font-weight: $fw-bold;
+    text-transform: capitalize;
+  }
+}

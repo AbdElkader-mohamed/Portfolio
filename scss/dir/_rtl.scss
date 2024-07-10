@@ -1,0 +1,16 @@
+$s: right;
+$e: left;
+
+$p: -1;
+$n: 1;
+
+body {
+  direction: rtl;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+[type=tel],
+[type=email],
+[type=number] {
+  direction: rtl;
+}

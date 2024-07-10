@@ -1,0 +1,120 @@
+/*----------------------
+  About
+-----------------------*/ 
+.about {
+  display: flex;
+  &__avatar {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    &__img {
+      transform: scaleX($p);
+      margin-bottom: 30px;
+      transition: all .3s;
+    }
+    &__info {
+      h3 {
+        text-transform: uppercase;
+        letter-spacing: -0.05em;
+        background: $linear-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+        font: {
+          size:48px;
+          weight:$fw-same-bold
+        };
+      }
+      p {
+        color: $text-color;
+        font-size: 24px;
+        font-weight: $fw-light;
+        margin-bottom: 50px;
+        text-transform: capitalize;
+        span {
+          font-weight: $fw-same-bold;
+        }
+      }
+    }
+  }
+  &__text {
+    padding-#{$s}: 30px;
+    width: 60%;
+    &__head {
+      text-transform: uppercase;
+      letter-spacing: -0.05em;
+      background: $linear-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+      font: {
+        size:28px;
+        weight:$fw-same-bold
+      };
+    }
+    &__info {
+      color: $text-color;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      &--marker {
+        position: relative;
+        padding-#{$s}: 20px;
+        &::before {
+          content: '';
+          position: absolute;
+          #{$s}: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 2px;
+          width: 12px;
+          background: $linear-gradient;
+          
+        }
+      }
+    }
+    &__contact-info {
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid rgba($white-bg,0.1);
+      a,p {
+        color: $text-color;
+        margin-#{$e}:20px ;
+        margin-bottom:25px;
+        font: {
+          size: 18px;
+          weight:$fw-bold;
+        }
+        i {
+          margin-#{$e}:10px ;
+        }
+      }
+    }
+  }
+}
+
+@include responsive(max,992px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    &__text {
+      padding-left: 30px;
+      width: 100%;
+    }
+  }
+}
+@include responsive(max,768px) {
+  .about {
+    &__avatar {
+      &__info {
+        h3 {
+          font: {
+            size:35px;
+          };
+        }
+      }
+    }
+    &__text {
+      padding-#{$s}: 0;
+    }
+  }
+  }

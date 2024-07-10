@@ -1,0 +1,59 @@
+/*----------------------
+  Popular
+-----------------------*/ 
+.popular {
+  background: linear-gradient(177deg, $dark-bg 0%, $main-bg 190%);
+  &__video {
+    display: flex;
+    margin-bottom: 20px;
+    &__img {
+      flex: 0 0 40%;
+      width: 40%;
+      img {
+        max-height: 200px;
+      }
+    }
+    &__info {
+      flex: 0 0 60%;
+      width: 60%;
+      margin-#{$s}:20px ;
+      &__text{
+        color: $text-color;
+        font-weight: $fw-medium;
+        margin-bottom: 10px;
+      }
+      &__head {
+        font: {
+          size: 30px;
+          weight:$fw-same-bold;
+        };
+        color: $heading-color;
+      }
+      &__popup {
+        font-size: 20px;
+        color: $text-color;
+      }
+    }
+  }
+}
+@include responsive (max,768px){
+  .popular {
+    &__video {
+      flex-direction: column;
+      &__img {
+        text-align: center;
+        margin-bottom: 10px;
+        flex: 0 0 100%;
+        width: 100%;
+        img {
+          max-height: 300px;
+        }
+      }
+      &__info {
+        text-align: center;
+        flex: 0 0 100%;
+        width: 100%;
+      }
+    }
+  }
+}

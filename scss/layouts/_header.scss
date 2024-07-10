@@ -1,0 +1,28 @@
+/*----------------------
+  header
+-----------------------*/
+header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  transition:top .4s,background .3s ;
+  &.dark-bg {
+    background-color: $dark-bg;
+  }
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    .header__logo {
+      padding: 20px;
+      opacity: 1;
+    }
+  }
+}
+@include responsive (min,1201px) {
+  header {
+  top: -100%;
+  }
+}

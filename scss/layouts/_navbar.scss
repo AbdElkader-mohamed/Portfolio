@@ -1,0 +1,66 @@
+/*----------------------
+  navbar
+-----------------------*/ 
+.nav-left {
+  position: fixed;
+  z-index: 9;
+  #{$s}: -100%;
+  width: 285px;
+  height: 100vh;
+  background-color: $dark-bg;
+  transition: #{$s} .8s;
+  display: flex;
+  flex-direction: column;
+  &.open {
+    #{$s}: 0;
+  }
+  &__logo {
+    padding: 50px 25px;
+    display: block;
+    opacity: 0;
+    img {
+      max-height: 70px;
+    }
+  }
+  &__menu {
+  margin-top:40px ;
+  flex: 1;
+    &__item {
+        display: block;
+        color: $heading-color;
+        line-height: 28px;
+        padding: 10px 30px;
+        position: relative;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight:$fw-bold ;
+        opacity: .8;
+        transition: opacity .3s;
+        &::before {
+          content: '';
+          position: absolute;
+          #{$e}:0;
+          top: calc(50% - 1.5px);
+          width:0;
+          height: 3px;
+          background:linear-gradient(270.16deg, $main-color 33.61%, rgba(175, 38, 118, 0) 92.05%);
+          transition: all .3s ease-in;
+        }
+        &.active::before {
+          width: 65px;
+        }
+        &.active {
+        margin: 0;
+          opacity: 1;
+        }
+    }
+  }
+}
+@include responsive(min,1201px) {
+.nav-left {
+  #{$s}: 0;
+  &__logo {
+    opacity: 1;
+  }
+}
+}

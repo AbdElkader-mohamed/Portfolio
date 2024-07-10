@@ -1,0 +1,102 @@
+/*---------------------
+Contact
+----------------------*/
+.contact {
+  &__cards {
+    &__card {
+      display: flex;
+      border: 1px solid rgba($white-bg, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      &__icon {
+        display: inline-flex;
+        width: 90px;
+        height: 60px ;
+        align-items: center;
+        justify-content: center;
+        color: $text-color;
+        background: $linear-gradient;
+      }
+      &__caption {
+        margin-#{$s}:20px ;
+        &__head {
+          color: $heading-color;
+          font: {
+            size:18px;
+            weight:$fw-same-bold
+          };
+        }
+        &__text {
+          color: #ad94ad;
+          font: {
+            size:15px;
+          };
+        }
+      }
+    }
+  }
+  &__form-body {
+    padding: 50px;
+    background: $linear-gradient;
+    *{ 
+      color: $text-color;
+    }
+    &__head{
+      color: $heading-color;
+      line-height: 1.1;
+      letter-spacing: -0.05em;
+      margin-bottom: 10px;
+      font: {
+        size:40px;
+        weight:$fw-bold;
+      };
+    }
+    form {
+      margin-top: 30px;
+      .custom-label {
+        text-transform: uppercase;
+        font: {
+          size:12px;
+          weight:$fw-medium;
+        };
+      }
+      .custom-input {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0.675rem 0.75rem;
+        text-transform: capitalize;
+        color: $white-bg;
+        border: 1px solid rgba($white-bg, 0.5);
+        background-color: rgba($white-bg, 0.3);
+        &::placeholder {
+          color: #ad94ad;
+        }
+        &--submit {
+          width: 100%;
+          background-color: $dark-bg;
+          border: 0;
+          padding: 15px ;
+          font-weight: $fw-medium;
+          transition:background .4s ,color .4s ;
+          &:hover {
+            background-color: $white-bg;
+            color: $dark-bg;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive(max,768px) {
+  .contact {
+    &__form-body {
+      padding: 20px;
+      &__head{
+        font: {
+          size:30px;
+        };
+      }
+    }
+  }
+  }

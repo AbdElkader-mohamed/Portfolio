@@ -1,0 +1,33 @@
+/*------section-heading------*/ 
+.section-heading {
+  margin-bottom: 60px;
+  color: $heading-color;
+  h6 {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font: {
+      size:18px;
+      weight:$fw-bold;
+      style:italic;
+    };
+  }
+  h2 {
+    text-transform: uppercase;
+    font: {
+      size:48px;
+      weight:$fw-same-bold;
+    }
+    
+  }
+}
+@include responsive(max,768px){
+  .section-heading {
+    margin-bottom: 30px;
+    h2 {
+      font: {
+        size:35px;
+      }
+      
+    }
+  }
+}

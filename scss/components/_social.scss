@@ -1,0 +1,55 @@
+/*--social---*/ 
+.social {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+  margin: {
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  };
+  &__dokan {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+  }
+  a {
+    display: block;
+    background-color:$white-bg;
+    color: $dark-bg;
+    font-size: 17px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: background .3s , color .3s;
+    &:hover {
+      color: $text-color;
+      background-color: $main-color;
+    }
+  }
+  &--col {
+    position: absolute;
+    #{$e}:10px;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+    gap: 10px;
+    a {
+      background-color:transparent;
+      color: $text-color;
+      font-size: 14px;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      border: 1px solid $text-color;
+      transition: background .3s , color .3s;
+      &:hover {
+        color: $dark-bg;
+        background-color: $white-bg;
+      }
+    }
+  }
+}
